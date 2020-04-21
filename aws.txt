@@ -1,0 +1,6 @@
+https://towardsdatascience.com/how-to-deploy-a-docker-container-python-on-amazon-ecs-using-amazon-ecr-9c52922b738f
+aws ecr create-repository --repository-name docker-drachtio-freeswitch-mrf --region eu-central-1
+entrypoint.sh https://github.com/nginx-proxy/nginx-proxy/issues/1173
+docker build -t docker-drachtio-freeswitch-mrf .
+docker tag docker-drachtio-freeswitch-mrf:latest 891303157311.dkr.ecr.eu-central-1.amazonaws.com/docker-drachtio-freeswitch-mrf:latest
+docker push 891303157311.dkr.ecr.eu-central-1.amazonaws.com/docker-drachtio-freeswitch-mrf:latest

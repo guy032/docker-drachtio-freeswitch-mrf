@@ -39,6 +39,10 @@
   <X-PRE-PROCESS cmd="include" data="vars_diff.xml"/>
   <X-PRE-PROCESS cmd="include" data="vars.xml"/>
 
+  <X-PRE-PROCESS cmd="exec-set" data="bind_server_ip=curl -s http://instance-data/latest/meta-data/public-ipv4"/>
+  <X-PRE-PROCESS cmd="exec-set" data="ext_rtp_ip=curl -s http://instance-data/latest/meta-data/public-ipv4"/>
+  <X-PRE-PROCESS cmd="exec-set" data="ext_sip_ip=curl -s http://instance-data/latest/meta-data/public-ipv4"/>
+  
   <section name="configuration" description="Various Configuration">
     <X-PRE-PROCESS cmd="include" data="autoload_configs/*.xml"/>
   </section>
