@@ -3,6 +3,8 @@ set -e
 
 apt-get update -y
 apt-get install -y curl
+apt-get install -y libjbig-dev
+apt-get install -y libtiff-dev
 
 # listen on all interfaces, allow connections from anywhere
 sed -i -e "s/name=\"listen-ip\" value=\".*\"/name=\"listen-ip\" value=\"0.0.0.0\"/g" /usr/local/freeswitch/conf/autoload_configs/event_socket.conf.xml
